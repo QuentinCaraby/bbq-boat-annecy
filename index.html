@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBQ Boat Lac d'Annecy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background: #0099cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero {
+            background-image: url('https://www.annecy-lac.com/images/bbq-boat.jpg'); /* Remplace par une vraie image */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+        }
+        main {
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: -50px;
+            position: relative;
+            z-index: 1;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-top: 5px;
+        }
+        .confirmation {
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px;
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Réservez votre BBQ Boat sur le lac d'Annecy</h1>
+    <p>Une expérience unique entre amis ou en famille !</p>
+</header>
+
+<div class="hero"></div>
+
+<main>
+    <h2>Formulaire de réservation</h2>
+    <form id="reservationForm">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" required>
+
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" required>
+
+        <label for="date">Date</label>
+        <input type="date" id="date" required>
+
+        <label for="time">Heure</label>
+        <input type="time" id="time" required>
+
+        <label for="people">Nombre de personnes</label>
+        <select id="people" required>
+            <option value="">Sélectionner</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+        </select>
+
+        <button type="submit">Réserver</button>
+    </form>
+
+    <div class="confirmation" id="confirmationMessage" style="display: none;">
+        Merci pour votre réservation ! Nous vous contacterons rapidement.
+    </div>
+</main>
+
+<footer>
+    &copy; 2025 BBQ Boat Annecy | Contact : contact@bbqboat-annecy.fr
+</footer>
+
+<script>
+    const form = document.getElementById('reservationForm');
+    const confirmation = document.getElementById('confirmationMessage');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche l'envoi réel du formulaire
+        confirmation.style.display = 'block';
+        form.reset();
+    });
+</script>
+
+</body>
+</html>
