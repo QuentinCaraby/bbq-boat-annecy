@@ -1,0 +1,5 @@
+    <h2>Galerie BBQ Boat</h2>
+    <div class="gallery">
+        <img src="bbq-boat1.jpg" alt="BBQ Boat en groupe sur l'eau">
+        <img src="bbq-boat2.jpg" alt="BBQ Boat au coucher de soleil">
+    </div>
